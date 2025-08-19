@@ -64,7 +64,7 @@ app.post('/api/signup', async (req, res) => {
     }
 
     // Password strength validation
-    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]).{8,}$/;
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]).{8,}$/;
     if (!passwordRegex.test(password)) {
       return res.status(400).json({
         success: false,
@@ -163,4 +163,5 @@ process.on('SIGINT', () => {
 
 // Start the server
 startServer().catch(console.error);
+
 
