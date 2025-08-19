@@ -28,7 +28,8 @@ app.get('/signup', (req, res) => {
 
 // API endpoint for signup form submission
 app.post('/api/signup', (req, res) => {
-  try {
+  void (async () => {
+    try {
     const { email, username, password, confirmPassword, terms } = req.body;
 
     // Basic validation
@@ -163,6 +164,7 @@ process.on('SIGINT', () => {
 
 // Start the server
 startServer().catch(console.error);
+
 
 
 
