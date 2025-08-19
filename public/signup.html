@@ -1,138 +1,194 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up - Create Your Account</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div class="container">
-        <div class="signup-card">
-            <header class="signup-header">
-                <h1>Create Account</h1>
-                <p>Join us today and get started</p>
-            </header>
+      <div class="signup-card">
+        <header class="signup-header">
+          <h1>Create Account</h1>
+          <p>Join us today and get started</p>
+        </header>
 
-            <form id="signup-form" class="signup-form" novalidate>
-                <div class="form-group">
-                    <label for="email" class="form-label">Email Address</label>
-                    <input 
-                        type="email" 
-                        id="email" 
-                        name="email" 
-                        class="form-input" 
-                        required 
-                        aria-describedby="email-error"
-                        autocomplete="email"
-                        placeholder="Enter your email address"
-                    >
-                    <div id="email-error" class="error-message" role="alert" aria-live="polite"></div>
-                </div>
+        <form id="signup-form" class="signup-form" novalidate>
+          <div class="form-group">
+            <label for="email" class="form-label">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-input"
+              required
+              aria-describedby="email-error"
+              autocomplete="email"
+              placeholder="Enter your email address"
+            />
+            <div
+              id="email-error"
+              class="error-message"
+              role="alert"
+              aria-live="polite"
+            ></div>
+          </div>
 
-                <div class="form-group">
-                    <label for="username" class="form-label">Username</label>
-                    <input 
-                        type="text" 
-                        id="username" 
-                        name="username" 
-                        class="form-input" 
-                        required 
-                        aria-describedby="username-error"
-                        autocomplete="username"
-                        placeholder="Choose a username"
-                        minlength="3"
-                        maxlength="20"
-                    >
-                    <div id="username-error" class="error-message" role="alert" aria-live="polite"></div>
-                </div>
+          <div class="form-group">
+            <label for="username" class="form-label">Username</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              class="form-input"
+              required
+              aria-describedby="username-error"
+              autocomplete="username"
+              placeholder="Choose a username"
+              minlength="3"
+              maxlength="20"
+            />
+            <div
+              id="username-error"
+              class="error-message"
+              role="alert"
+              aria-live="polite"
+            ></div>
+          </div>
 
-                <div class="form-group">
-                    <label for="password" class="form-label">Password</label>
-                    <div class="password-input-wrapper">
-                        <input 
-                            type="password" 
-                            id="password" 
-                            name="password" 
-                            class="form-input" 
-                            required 
-                            aria-describedby="password-error password-requirements"
-                            autocomplete="new-password"
-                            placeholder="Create a strong password"
-                            minlength="8"
-                        >
-                        <button type="button" class="password-toggle" aria-label="Toggle password visibility">
-                            <span class="password-toggle-icon">👁️</span>
-                        </button>
-                    </div>
-                    <div id="password-requirements" class="password-requirements">
-                        <p>Password must contain:</p>
-                        <ul>
-                            <li id="length-req" class="requirement">At least 8 characters</li>
-                            <li id="uppercase-req" class="requirement">One uppercase letter</li>
-                            <li id="lowercase-req" class="requirement">One lowercase letter</li>
-                            <li id="number-req" class="requirement">One number</li>
-                            <li id="special-req" class="requirement">One special character</li>
-                        </ul>
-                    </div>
-                    <div id="password-error" class="error-message" role="alert" aria-live="polite"></div>
-                </div>
-
-                <div class="form-group">
-                    <label for="confirm-password" class="form-label">Confirm Password</label>
-                    <div class="password-input-wrapper">
-                        <input 
-                            type="password" 
-                            id="confirm-password" 
-                            name="confirmPassword" 
-                            class="form-input" 
-                            required 
-                            aria-describedby="confirm-password-error"
-                            autocomplete="new-password"
-                            placeholder="Confirm your password"
-                        >
-                        <button type="button" class="password-toggle" aria-label="Toggle password visibility">
-                            <span class="password-toggle-icon">👁️</span>
-                        </button>
-                    </div>
-                    <div id="confirm-password-error" class="error-message" role="alert" aria-live="polite"></div>
-                </div>
-
-                <div class="form-group checkbox-group">
-                    <label class="checkbox-label">
-                        <input 
-                            type="checkbox" 
-                            id="terms" 
-                            name="terms" 
-                            required 
-                            aria-describedby="terms-error"
-                        >
-                        <span class="checkbox-custom"></span>
-                        <span class="checkbox-text">
-                            I agree to the <a href="#" class="link">Terms of Service</a> and 
-                            <a href="#" class="link">Privacy Policy</a>
-                        </span>
-                    </label>
-                    <div id="terms-error" class="error-message" role="alert" aria-live="polite"></div>
-                </div>
-
-                <button type="submit" class="submit-btn" disabled>
-                    <span class="btn-text">Create Account</span>
-                    <span class="btn-loading" style="display: none;">Creating Account...</span>
-                </button>
-
-                <div class="form-footer">
-                    <p>Already have an account? <a href="#" class="link">Sign in here</a></p>
-                </div>
-            </form>
-
-            <div id="success-message" class="success-message" style="display: none;" role="alert" aria-live="polite">
-                <h2>Account Created Successfully!</h2>
-                <p>Welcome! Your account has been created. You can now start using our services.</p>
+          <div class="form-group">
+            <label for="password" class="form-label">Password</label>
+            <div class="password-input-wrapper">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="form-input"
+                required
+                aria-describedby="password-error password-requirements"
+                autocomplete="new-password"
+                placeholder="Create a strong password"
+                minlength="8"
+              />
+              <button
+                type="button"
+                class="password-toggle"
+                aria-label="Toggle password visibility"
+              >
+                <span class="password-toggle-icon">👁️</span>
+              </button>
             </div>
+            <div id="password-requirements" class="password-requirements">
+              <p>Password must contain:</p>
+              <ul>
+                <li id="length-req" class="requirement">
+                  At least 8 characters
+                </li>
+                <li id="uppercase-req" class="requirement">
+                  One uppercase letter
+                </li>
+                <li id="lowercase-req" class="requirement">
+                  One lowercase letter
+                </li>
+                <li id="number-req" class="requirement">One number</li>
+                <li id="special-req" class="requirement">
+                  One special character
+                </li>
+              </ul>
+            </div>
+            <div
+              id="password-error"
+              class="error-message"
+              role="alert"
+              aria-live="polite"
+            ></div>
+          </div>
+
+          <div class="form-group">
+            <label for="confirm-password" class="form-label"
+              >Confirm Password</label
+            >
+            <div class="password-input-wrapper">
+              <input
+                type="password"
+                id="confirm-password"
+                name="confirmPassword"
+                class="form-input"
+                required
+                aria-describedby="confirm-password-error"
+                autocomplete="new-password"
+                placeholder="Confirm your password"
+              />
+              <button
+                type="button"
+                class="password-toggle"
+                aria-label="Toggle password visibility"
+              >
+                <span class="password-toggle-icon">👁️</span>
+              </button>
+            </div>
+            <div
+              id="confirm-password-error"
+              class="error-message"
+              role="alert"
+              aria-live="polite"
+            ></div>
+          </div>
+
+          <div class="form-group checkbox-group">
+            <label class="checkbox-label">
+              <input
+                type="checkbox"
+                id="terms"
+                name="terms"
+                required
+                aria-describedby="terms-error"
+              />
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-text">
+                I agree to the <a href="#" class="link">Terms of Service</a> and
+                <a href="#" class="link">Privacy Policy</a>
+              </span>
+            </label>
+            <div
+              id="terms-error"
+              class="error-message"
+              role="alert"
+              aria-live="polite"
+            ></div>
+          </div>
+
+          <button type="submit" class="submit-btn" disabled>
+            <span class="btn-text">Create Account</span>
+            <span class="btn-loading" style="display: none"
+              >Creating Account...</span
+            >
+          </button>
+
+          <div class="form-footer">
+            <p>
+              Already have an account? <a href="#" class="link">Sign in here</a>
+            </p>
+          </div>
+        </form>
+
+        <div
+          id="success-message"
+          class="success-message"
+          style="display: none"
+          role="alert"
+          aria-live="polite"
+        >
+          <h2>Account Created Successfully!</h2>
+          <p>
+            Welcome! Your account has been created. You can now start using our
+            services.
+          </p>
         </div>
+      </div>
     </div>
 
     <script src="signup.js"></script>
-</body>
+  </body>
 </html>
