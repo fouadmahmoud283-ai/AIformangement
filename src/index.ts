@@ -22,7 +22,7 @@ app.get("/", (_req, res) => {
   res.sendFile(path.join(publicPath, "signup.html"));
 });
 
-app.get("/signup", (req, res) => {
+app.get("/signup", (_req, res) => {
   res.sendFile(path.join(publicPath, "signup.html"));
 });
 
@@ -175,4 +175,5 @@ process.on("SIGINT", () => {
 
 // Start the server
 startServer().catch(console.error);
+
 
