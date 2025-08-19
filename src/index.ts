@@ -97,13 +97,14 @@ app.post('/api/signup', (req, res) => {
       }
     });
 
-  } catch (error) {
-    console.error('Signup error:', error);
-    res.status(500).json({
-      success: false,
-      message: 'Internal server error. Please try again later.'
-    });
-  }
+    } catch (error) {
+      console.error('Signup error:', error);
+      res.status(500).json({
+        success: false,
+        message: 'Internal server error. Please try again later.'
+      });
+    }
+  })();
 });
 
 // Health check endpoint
@@ -164,6 +165,7 @@ process.on('SIGINT', () => {
 
 // Start the server
 startServer().catch(console.error);
+
 
 
 
