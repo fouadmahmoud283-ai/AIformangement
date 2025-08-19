@@ -98,6 +98,7 @@ app.post("/api/signup", (req, res) => {
           createdAt: new Date().toISOString(),
         },
       });
+      return;
     } catch (error) {
       console.error("Signup error:", error);
       res.status(500).json({
@@ -175,6 +176,7 @@ process.on("SIGINT", () => {
 
 // Start the server
 startServer().catch(console.error);
+
 
 
 
