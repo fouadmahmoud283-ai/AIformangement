@@ -27,7 +27,7 @@ app.get('/signup', (req, res) => {
 });
 
 // API endpoint for signup form submission
-app.post('/api/signup', async (req, res) => {
+app.post('/api/signup', (req, res) => {
   try {
     const { email, username, password, confirmPassword, terms } = req.body;
 
@@ -163,5 +163,6 @@ process.on('SIGINT', () => {
 
 // Start the server
 startServer().catch(console.error);
+
 
 
