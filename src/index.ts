@@ -177,11 +177,3 @@ process.on("SIGINT", () => {
 
 // Start the server
 startServer().catch(console.error);
-
-
-
-
-
-
-
-
