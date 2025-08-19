@@ -118,7 +118,7 @@ app.get("/api/health", (_req, res) => {
 });
 
 // 404 handler for API routes
-app.use("/api/*", (req, res) => {
+app.use("/api/*", (_req, res) => {
   res.status(404).json({
     success: false,
     message: "API endpoint not found",
@@ -175,6 +175,7 @@ process.on("SIGINT", () => {
 
 // Start the server
 startServer().catch(console.error);
+
 
 
 
