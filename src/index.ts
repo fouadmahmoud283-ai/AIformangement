@@ -18,7 +18,7 @@ const publicPath = path.join(__dirname, "..", "public");
 app.use(express.static(publicPath));
 
 // Routes
-app.get("/", (req, res) => {
+app.get("/", (_req, res) => {
   res.sendFile(path.join(publicPath, "signup.html"));
 });
 
@@ -175,3 +175,4 @@ process.on("SIGINT", () => {
 
 // Start the server
 startServer().catch(console.error);
+
