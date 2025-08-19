@@ -105,6 +105,7 @@ app.post("/api/signup", (req, res) => {
         success: false,
         message: "Internal server error. Please try again later.",
       });
+      return;
     }
   })();
 });
@@ -176,6 +177,7 @@ process.on("SIGINT", () => {
 
 // Start the server
 startServer().catch(console.error);
+
 
 
 
